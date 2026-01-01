@@ -1,0 +1,33 @@
+name: rideableCamera
+version: '1.0-SNAPSHOT'
+main: my.pikrew.rideablecamera.RideableCameraPlugin
+api-version: '1.21'
+
+commands:
+  ridecam:
+    description: Main camera command
+    usage: /ridecam [on|off|toggle|info|reload|help|<player>]
+    aliases: [rcam, ridecamera, npcam]
+    permission: rideablecamera.use
+    permission-message: §cYou don't have permission to use this command!
+
+permissions:
+  rideablecamera.*:
+    description: All RideableCamera permissions
+    default: op
+    children:
+      rideablecamera.use: true
+      rideablecamera.others: true
+      rideablecamera.reload: true
+
+  rideablecamera.use:
+    description: Use the rideable camera
+    default: true
+
+  rideablecamera.others:
+    description: Toggle camera for other players
+    default: op
+
+  rideablecamera.reload:
+    description: Reload plugin configuration
+    default: op

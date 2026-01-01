@@ -1,0 +1,74 @@
+# ============================================
+#     RideableCamera Configuration
+# ============================================
+
+camera:
+  # Camera implementation type
+  # Options: armorstand, fakeplayer
+  # armorstand = Simple and stable (recommended)
+  # fakeplayer = More realistic but requires NMS (not yet implemented)
+  implementation: armorstand
+
+  # Auto-enable camera when player joins?
+  auto-enable-on-join: false
+
+  # Enable double-sneak to toggle camera?
+  double-sneak-toggle: false
+
+  # Camera distance from NPC (in blocks)
+  # Default: 3.5
+  # Range: 0.5 - 10.0
+  distance: 3.5
+
+  # Camera height offset (in blocks)
+  # Default: 1.5
+  # Range: -2.0 - 10.0
+  height: 1.5
+
+  # Camera side offset (in blocks)
+  # 0 = center, positive = right, negative = left
+  # Default: 0.0
+  # Range: -5.0 - 5.0
+  side-offset: 0.0
+
+  # Camera smoothness factor
+  # Lower = smoother movement
+  # Default: 0.15
+  # Range: 0.0 - 1.0
+  smoothness: 0.15
+
+  # Update interval (in ticks)
+  # 1 tick = 50ms
+  # Default: 1 (update every tick)
+  update-interval: 1
+
+npc:
+  # Copy player equipment to NPC?
+  copy-equipment: true
+
+  # Sync equipment changes in real-time?
+  sync-equipment: true
+
+  # Show NPC name above head?
+  show-name: false
+
+messages:
+  # Message prefix
+  prefix: '§a[RideCam]§f'
+
+  # Command messages
+  enabled: 'Camera §aenabled§f!'
+  disabled: 'Camera §cdisabled§f!'
+  already-enabled: '§eCamera is already enabled!'
+  not-enabled: '§eCamera is not enabled!'
+  error: '§cFailed to toggle camera!'
+  reloaded: 'Configuration §areloaded§f!'
+
+  # Permission messages
+  no-permission: '§cYou don''t have permission to do that!'
+  player-only: '§cThis command can only be used by players!'
+  player-not-found: '§cPlayer not found!'
+
+  # Other player messages
+  enabled-by-other: 'Camera enabled by §e%player%'
+  disabled-by-other: 'Camera disabled by §e%player%'
